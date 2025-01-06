@@ -12,7 +12,7 @@ Command line program (CLI) and API for starting and working with Minecraft Java 
 Start a server through the command line:
 
 ```
-npx mcpc-server -v 1.18.0
+npx mcpc-server -v 1.18
 ```
 
 Or with npm to use programmatically:
@@ -67,20 +67,21 @@ to get
 ### Help screen
 
 ```
-mcpc-server - v1.2.0
-Minecraft Java Server runner
-Options:
-  --version, -v Version to download (use "latest" for latest)  
-  --port        Port to listen on for IPv4  (default: 25565)
-  --port6       Port to listen on for IPv6  (default: 19133)
-  --online      Whether to run in online mode  
-  --path        Custom path to the server directory  
-  --versions    Passing --versions will list all versions  
-  --download    Download (but not run) the server binary for this platfrom (default: linux)  
+mcpc-server - v1.0.0
+Minecraft Java Edition Server runner
 Usage:
   mcpc-server --version latest      Start a server on the latest version
   mcpc-server --versions            List all avaliable versions
-  mcpc-server -v 1.20.0 --download  Download (but not run) v1.20
+  mcpc-server -v 1.20 --download    Download v1.20
+
+Options:
+  --version, -v Version to download (use "latest" for latest)  
+  --port        Port to listen on for IPv4  (default: 25565)
+  --online      Whether to run in online mode  
+  --path        Custom path to the server directory  
+  --versions    Passing --versions will list all versions  
+  --dumpRegistries      Run all data generators and output to the passed path  
+  --download    Download (but not run) the server binary 
 ```
 
 ## API

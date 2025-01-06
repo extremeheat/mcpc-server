@@ -4,7 +4,7 @@ const { version } = require('../package.json')
 
 const opt = require('basic-args')({
   name: 'mcpc-server',
-  description: 'Minecraft Java Server runner',
+  description: 'Minecraft Java Edition Server runner',
   version,
   options: {
     version: { type: String, description: 'Version to download (use "latest" for latest)', alias: 'v' },
@@ -14,7 +14,7 @@ const opt = require('basic-args')({
 
     versions: { type: Boolean, description: 'Passing --versions will list all versions' },
     dumpRegistries: { type: String, description: 'Run all data generators and output to the passed path', default: '' },
-    download: { type: String, description: `Download (but not run) the server binary for this platfrom (default: ${process.platform})`, default: null }
+    download: { type: Boolean, description: 'Download (but not run) the server binary' }
   },
   examples: [
     'mcpc-server --version latest      Start a server on the latest version',
@@ -22,9 +22,6 @@ const opt = require('basic-args')({
     'mcpc-server -v 1.20 --download    Download v1.20'
   ],
   preprocess (options) {
-    if (options.download === true) {
-      options.download = true
-    }
     if (options.versions) {
       options.version = '*'
     }

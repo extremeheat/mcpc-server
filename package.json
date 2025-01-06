@@ -1,7 +1,7 @@
 {
   "name": "mcpc-server",
   "version": "1.0.0",
-  "description": "A template repository to make it easy to create new prismarine repo",
+  "description": "Minecraft Java Edition server tool to run servers with CLI and API",
   "main": "src/index.js",
   "bin": {
     "mcpc-server": "./src/cli.js"
@@ -20,7 +20,7 @@
     "prismarine",
     "template"
   ],
-  "author": "Romain Beaumont",
+  "author": "extremeheat",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/extremeheat/mcpc-server/issues"
@@ -32,6 +32,7 @@
     "standard": "^17.0.0"
   },
   "dependencies": {
-    "basic-args": "^1.4.1"
+    "basic-args": "^1.4.1",
+    "debug": "^4.4.0"
   }
 }
