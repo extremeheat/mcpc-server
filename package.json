@@ -1,6 +1,6 @@
 {
   "name": "mcpc-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Minecraft Java Edition server tool to run servers with CLI and API",
   "main": "src/index.js",
   "bin": {
