@@ -1,8 +1,11 @@
 {
-  "name": "prismarine-template",
+  "name": "mcpc-server",
   "version": "1.0.0",
   "description": "A template repository to make it easy to create new prismarine repo",
-  "main": "index.js",
+  "main": "src/index.js",
+  "bin": {
+    "mcpc-server": "./src/cli.js"
+  },
   "scripts": {
     "test": "mocha --reporter spec --exit",
     "pretest": "npm run lint",
@@ -11,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PrismarineJS/prismarine-template.git"
+    "url": "git+https://github.com/extremeheat/mcpc-server.git"
   },
   "keywords": [
     "prismarine",
@@ -20,12 +23,15 @@
   "author": "Romain Beaumont",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PrismarineJS/prismarine-template/issues"
+    "url": "https://github.com/extremeheat/mcpc-server/issues"
   },
-  "homepage": "https://github.com/PrismarineJS/prismarine-template#readme",
+  "homepage": "https://github.com/extremeheat/mcpc-server#readme",
   "devDependencies": {
-    "prismarine-template": "file:.",
-    "standard": "^17.0.0",
-    "mocha": "^10.0.0"
+    "mcpc-server": "file:.",
+    "mocha": "^10.8.2",
+    "standard": "^17.0.0"
+  },
+  "dependencies": {
+    "basic-args": "^1.4.1"
   }
 }
